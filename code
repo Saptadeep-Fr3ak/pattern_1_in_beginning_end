@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class pattern
+{
+    static void main ()
+    {
+        Scanner sc = new Scanner (System.in);
+        System.out.print ("Enter the number of rows: ");
+        int n= sc.nextInt(), s, p;
+        System.out.println ("\nYour desired pattern: \n");
+        for (int i = 1; i<=n; i++)
+        {
+            s = n - i;
+            for (p=1; p<=i; p++)
+            {
+                while (s>0)
+                {
+                    System.out.print (" ");
+                    s--;
+                }
+                System.out.print (p);
+            }
+            for (p= (i-1); p>=1; p--)
+            {
+                System.out.print (p);
+            }
+            System.out.println();
+        }
+    }
+}
